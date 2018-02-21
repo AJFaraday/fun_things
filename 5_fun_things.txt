@@ -1,0 +1,36 @@
+Five* "Fun" Things to do with Ruby String Manipulation
+
+Learning to code requires trial and error.
+Sticking with it requires goals you want to achieve.
+Having fun with code encourages you to play, explore and learn.
+In this session I'll share the knowledge of some simple coding concepts, and a couple of ways to display these as 'fun' outcomes you can see on a terminal using Ruby code.
+
+
+* Might not be five.
+* Might not be fun.
+
+
+- na * 16
+- Generate an ascii snake (random walk)
+  - iteration
+  - arithmetic on strings (vs injection)
+  - random walk
+- Climbing bars (classes, attributes)
+- Falling sand (cellular automata)
+- Vowel swapping
+
+
+
+s = "The quick brown fox jumps over the lazy dog"
+vowels = %w{a e i o u}
+puts s
+
+vowels.each_with_index do |vowel, index|
+  s.gsub!(vowel,"SUB#{index}SUB")
+end
+puts s
+vowels.each_with_index do |vowel, index|
+  s.gsub!("SUB#{index}SUB", vowels[(index+1)%vowels.length])
+end
+puts s
+

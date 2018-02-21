@@ -1,0 +1,22 @@
+bar.rb
+
+# class
+# initialization
+# private/public interface
+# constant
+
+many.rb
+
+# class, but many instances
+
+moving.rb
+
+# recap of iteration from earlier
+
+tidied.rb
+
+# single responsibility, renderer class
+
+more_tidied.rb
+
+# factory class

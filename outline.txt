@@ -1,0 +1,103 @@
+Get straight into code:
+irb
+puts "Hello, world!"
+
+- first program
+- The inverted commas are a string of text
+- two concepts, a variable and string injection
+
+name = 'Andrew'
+puts "Hello, #{name}!"
+
+- New concept: Iteration
+names = ['Ted', 'Andrew', 'Lauren', 'Richard', 'Matthew']
+names.each do |name|
+  puts "Hello, #{name}!"
+end
+
+- Arithmetic-type operations on strings
+
+puts 'Hello ' + 'world'
+puts "Hello, world! " * 100
+
+- first fun thing:
+
+puts "Na#{' na' *15}, Batman!"
+
+- Second fun thing
+- Show script, snake/simple_script.rb
+- - Already used variable, iteration, arithmetic on strings
+- - New concepts, mutation (changing existing variable), random walk
+- BUT, it doesn't look very much like a snake, let's try to remedy that
+- Show second script snake/shaped_script.rb
+- - New concept, method - reusable code. Arguments to say how it'll work differently.
+- One last iteration on the snake - snake/animated_script.rb
+
+-----------------------------
+
+- simple aim, draw a bar chart... show image
+- describe line-by-line process
+
+- Show file: bars/bar.rb
+- initialize - holds attributes
+- public/private interfaces
+- row - what do I draw at this row?
+- value= - change value, with protection
+
+- bars/single.rb - show row-by-row rendering
+- bars/many.rb - iterating through bars for each row
+- bars/moving.rb 
+- - draw it all, then change each, then draw again (notice random walk)
+- - Having learned to draw a chart, we're now more interested in changing it. lines 16-19 are making it harder to see the part we're interested in.
+
+- show bars/bar_renderer.rb
+- show bars/tidied.rb
+
+- Notice that we now just ask the renderer to do the drawing, and the code for movement is more up-front.
+- Now the most irrelevant code is in initializing the bar renderer.
+
+- new concept, factory. An object who's only job is to produce other objects.
+- show bars/bar_factory.rb
+- show bars/more_tidied.rb
+- Added advantage, we can change the number, width of bars without much effort.
+
+- Show bars/follow.rb
+
+We've tidied away generating the bars, and drawing them to the terminal.
+So we can give it some interesting behaviour. Each bar steps towards the average of it's two neighbours. (cellular automata)
+
+- show bars/big_follow.rb
+
+Added rules, bit more fun.
+
+-------------------------------------------
+
+A different kind of cellular automata, on 2 dimensions. Sand dropping
+
+The components are
+- a grid, on screen
+- each grid can be on (has sand) or off (does not have sand)
+- A decision making process for each cell
+- a factory adding sand at a certain point
+
+Show image2.jpg
+
+Show script working (don't have time to show you through the code)
+
+-------------------------------------------
+
+- The last "fun" thing is substitution
+
+s = "Hello, world!"
+s.gsub!('Hello', 'Good night')
+puts s
+
+- Show substitute.rb
+
+Explain placeholder SUB
+
+Run it, it's surprisingly easy to read.
+
+
+
+

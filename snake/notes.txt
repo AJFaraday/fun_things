@@ -1,0 +1,16 @@
+simple_script.rb
+
+# variable
+# iteration
+# string injection
+# mutating variables
+
+animated_script.rb
+
+# infinite loop
+
+shaped_sript.rb
+
+# defining methods
+# arguments
+# calling methods
